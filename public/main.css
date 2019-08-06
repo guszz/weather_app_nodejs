@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, rgb(255, 167, 35), rgb(255, 97, 35));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  max-width: 90%;
+  width: 400px;
+  background-color: white;
+  box-shadow: 0 5px 10px black;
+  border-radius: 5px;
+}
+
+.content {
+  padding: 40px;
+  margin-top: 20px;
+}
+
+.header {
+  background-color: #222;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.icon-container {
+  position: relative;
+  top: 70px;
+  padding: 20px;
+  background-color: white;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+.general-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.status {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.location {
+  font-size: 1.7rem;
+  font-weight: normal;
+}
+
+.detail-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.detail.bordered {
+  border-left: 1px solid #777;
+  border-right: 1px solid #777;
+}
+
+.detail .title {
+  display: none;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  flex-grow: 1;
+  font-weight: bold;
+  color: #777;
+}
+
+.detail .value-container {
+  display: flex;
+  flex-direction: row;
+}
+.value-container span {
+  font-size: 2rem;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.detail .main-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.detail .value {
+  font-size: 2rem;
+  font-weight: 100;
+}
+.detail .value:nth-of-type(1) {
+  color: blue;
+}
+.detail .value:nth-of-type(2) {
+  color: red;
+}
+
+.city-search-container {
+  display: flex;
+  justify-content: center;
+}
+
+.city-search {
+  margin-top: 15px;
+  font-size: 2rem;
+  outline: none;
+  border: 1px solid #777;
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+.pac-item {
+  font-size: 2rem;
+  padding: 10px 10px;
+}
+
+.pac-icon {
+  display: none;
+}
+
+.pac-item-query {
+  font-size: 2rem;
+  padding-right: 14px;
+}
+
+.darksky-logo {
+  position: absolute;
+  text-decoration: none;
+  bottom: 10px;
+  right: 10px;
+  color: #333;
+  font-size: 0.25rem;
+}
