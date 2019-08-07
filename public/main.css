@@ -125,16 +125,17 @@ body {
 .city-search-container {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .city-search {
-  margin-top: 15px;
   font-size: 2rem;
   outline: none;
   border: 1px solid #777;
   border-radius: 5px;
   padding: 10px 15px;
   width: 100%;
+  z-index: 99;
 }
 
 .pac-item {
@@ -158,4 +159,27 @@ body {
   right: 10px;
   color: #333;
   font-size: 0.25rem;
+}
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: all 300ms ease-in;
+  z-index: 1;
+}
+.fecha-modal {
+  color: #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -5rem;
+  right: 0;
+  font-weight: bold;
+  font-size: 3rem;
+  cursor: pointer;
 }
