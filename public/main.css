@@ -8,7 +8,7 @@
 }
 
 body {
-  background: linear-gradient(to right, rgb(255, 167, 35), rgb(255, 97, 35));
+  background-color: #ed3237;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,34 +20,25 @@ body {
 .container {
   position: relative;
   max-width: 90%;
-  width: 400px;
-  background-color: white;
-  box-shadow: 0 5px 10px black;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 5px;
 }
 
 .content {
-  padding: 40px;
-  margin-top: 20px;
-}
-
-.header {
-  background-color: #222;
-  height: 120px;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 0;
 }
 
 .icon-container {
   position: relative;
-  top: 70px;
-  padding: 20px;
-  background-color: white;
-  width: 140px;
-  height: 140px;
+  padding: 5px;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
@@ -55,16 +46,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
-}
-
-.status {
-  font-size: 3rem;
-  font-weight: bold;
 }
 
 .location {
-  font-size: 1.7rem;
+  color: #fff;
+  font-size: 1rem;
   font-weight: normal;
 }
 
@@ -75,57 +61,50 @@ body {
 
 .detail {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   flex-basis: 0;
   flex-grow: 1;
-  padding: 10px;
+  padding: 0.3rem 0;
 }
-
-.detail.bordered {
-  border-left: 1px solid #777;
-  border-right: 1px solid #777;
+.value {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.detail .title {
-  display: none;
-  width: 100%;
-  text-align: center;
-  font-size: 2rem;
-  flex-grow: 1;
-  font-weight: bold;
-  color: #777;
-}
-
 .detail .value-container {
   display: flex;
   flex-direction: row;
 }
 .value-container span {
-  font-size: 2rem;
+  font-size: 1rem;
+  color: #fff;
   margin-right: 10px;
   margin-left: 10px;
 }
 .detail .main-value {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
 }
 .detail .value {
-  font-size: 2rem;
-  font-weight: 100;
+  font-size: 1rem;
+  font-weight: 400;
 }
 .detail .value:nth-of-type(1) {
-  color: blue;
+  color: #0984e3;
 }
 .detail .value:nth-of-type(2) {
-  color: red;
+  color: #ed3237;
 }
 
 .city-search-container {
   display: flex;
   justify-content: center;
   position: relative;
+  margin-top: 10%;
 }
 
 .city-search {
@@ -134,8 +113,6 @@ body {
   border: 1px solid #777;
   border-radius: 5px;
   padding: 10px 15px;
-  width: 100%;
-  z-index: 99;
 }
 
 .pac-item {
@@ -155,17 +132,17 @@ body {
 .darksky-logo {
   position: absolute;
   text-decoration: none;
-  bottom: 10px;
-  right: 10px;
-  color: #333;
-  font-size: 0.25rem;
+  bottom: 2px;
+  right: 3px;
+  color: #fff;
+  font-size: 0rem;
 }
 .modal-container {
   width: 100vw;
   height: 100vh;
   display: none;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: absolute;
   top: 0;
   left: 0;
@@ -174,12 +151,16 @@ body {
   z-index: 1;
 }
 .fecha-modal {
-  color: #fff;
+  color: #777;
   transform: rotate(45deg);
   position: absolute;
-  top: -5rem;
-  right: 0;
-  font-weight: bold;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  top: 2px;
+  right: 1rem;
+  font-weight: 100;
   font-size: 3rem;
   cursor: pointer;
+  z-index: 99;
 }

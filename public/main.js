@@ -7,11 +7,10 @@ $(document).ready(function () {
     navigator.geolocation.getCurrentPosition(function (position) {
       lat = position.coords.latitude;
       long = position.coords.longitude;
-      const geoCode =
 
-        $.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&key=AIzaSyDSXm9iGOJQqBYzk77OSmbQkqE9NMTTQNI", function (data) {
-          myPlace = data.results[4];
-        });
+      $.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&key=AIzaSyDSXm9iGOJQqBYzk77OSmbQkqE9NMTTQNI", function (data) {
+        myPlace = data.results[4];
+      });
       fetch('/weather', {
         method: 'POST',
         headers: {
@@ -49,12 +48,13 @@ searchBox.addListener('places_changed', () => {
       longitude: longitude
     })
   }).then(res => res.json()).then(data => {
+    console.log(place)
     setWeatherData(data, place.formatted_address)
     closeModal()
   })
 })
 
-const icon = new Skycons({ color: '#222' })
+const icon = new Skycons({ color: '#fff' })
 const locationElement = document.querySelector('[data-location]')
 const temperatureElement = document.querySelector('[data-temperature]')
 const temperatureMinElement = document.querySelector('[data-temperature-min]')
